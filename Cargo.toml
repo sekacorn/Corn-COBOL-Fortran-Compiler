@@ -1,0 +1,15 @@
+[package]
+name = "cobol-fortran-compiler"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+aes-gcm = "0.9"                     # Encryption library for secure reports
+actix-web = "4"                      # Web framework for API and dashboard
+rand = "0.8"                         # Random key generation for encryption
+tokio = { version = "1", features = ["full"] } # Async runtime for networking
+reqwest = { version = "0.11", features = ["blocking", "json"] } # HTTP requests for API
+flate2 = "1.0"                       # Gzip compression for reports
+serde = { version = "1.0", features = ["derive"] } # Serialization support
+serde_json = "1.0"                    # JSON handling for reports
+sqlx = { version = "0.5", features = ["mysql", "postgres", "sqlite", "runtime-tokio-rustls"] } # Database support for SQL integration
